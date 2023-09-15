@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        /* Estilos CSS para dar formato a la galería de imágenes */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            max-width: 300px;
+            margin: 10px;
+        }
+
+        /* Estilos CSS para el footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Galería de imágenes (al inicio de la página) -->
+    <div class="gallery">
+        <img src="imagen1.jpg" alt="Imagen 1">
+        <img src="imagen2.jpg" alt="Imagen 2">
+        <img src="imagen3.jpg" alt="Imagen 3">
+        <!-- Agrega más imágenes aquí -->
+    </div>
+
+    <!-- Título -->
+    <h1>Hernández Tapia Ricardo</h1>
+
+    <!-- Botones para los parciales -->
+    <button onclick="abrirParcial('parcial1.pdf')">Primer Parcial</button>
+    <button onclick="abrirParcial('parcial2.pdf')">Segundo Parcial</button>
+    <button onclick="abrirParcial('parcial3.pdf')">Tercer Parcial</button>
+
+    <!-- Footer con el copyright y enlace a Instagram -->
+    <footer>
+        &copy; Ricardo Hernández Tapia <?php echo date("Y"); ?> | <a href="https://www.instagram.com/r1k4_13/" target="_blank">Instagram</a>
+    </footer>
+
+    <script>
+        // Función para abrir una nueva pestaña con el archivo del parcial
+        function abrirParcial(archivo) {
+            window.open(archivo, '_blank');
+        }
+    </script>
+</body>
+</html>
