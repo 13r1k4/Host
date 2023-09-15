@@ -30,24 +30,6 @@
             text-decoration: none;
         }
     </style>
-    <script>
-    // Función para abrir múltiples pestañas con archivos del primer parcial
-    function abrirParcialPrimer() {
-        abrirVentana('Act 1.1.html');
-        abrirVentana('Act 1.2.html');
-        abrirVentana('Act 1.3.html');
-        abrirVentana('ejemplo_tabla.html');
-        abrirVentana('banco.sql');
-        abrirVentana('e_facturas.sql');
-        abrirVentana('libreria.sql');
-    }
-
-    // Función para abrir una ventana emergente con un archivo
-    function abrirVentana(archivo) {
-        window.open(archivo, '_blank');
-    }
-</script>
-
 </head>
 <body>
     <!-- Galería de imágenes (al inicio de la página) -->
@@ -55,14 +37,15 @@
         <img src="https://lastfm.freetls.fastly.net/i/u/ar0/0d3a88f8d3b8be2ccffae1792cadd0be.jpg" alt="Imagen 1">
         <img src="https://lastfm.freetls.fastly.net/i/u/ar0/31e1f9395f5ef7805107ee6f4ceb2d08.jpg" alt="Imagen 2">
         <img src="https://cdns-images.dzcdn.net/images/cover/52c772aeead66fe8fa5aa738c9950a47/500x500.jpg" alt="Imagen 3">
-        <!-- Agrega más imágenes aquí -->
+        <!-- Agrega más imágenes aquí con sus respectivas URLs -->
     </div>
 
     <!-- Título -->
     <h1>Hernández Tapia Ricardo</h1>
-    <p>Como estudiante universitario, tengo sueños y metas normales. Estoy comprometido con mi educación y trabajando duro para alcanzar mis objetivos académicos. 
-        La universidad es una etapa emocionante de mi vida, llena de aprendizaje y crecimiento personal. Pero la verdad preferiría sólo andar jugando volley y estar
-        acostado en mi cama.</p>
+
+    <!-- Párrafo sobre la vida de un estudiante universitario -->
+    <p>Como estudiante universitario, tengo sueños y metas normales. Estoy comprometido con mi educación y trabajando duro para alcanzar mis objetivos académicos. La universidad es una etapa emocionante de mi vida, llena de aprendizaje y crecimiento personal.</p>
+
     <!-- Botones para los parciales -->
     <button onclick="abrirParcialPrimer()">Primer Parcial</button>
     <button onclick="abrirParcial('parcial2.pdf')">Segundo Parcial</button>
@@ -74,8 +57,19 @@
     </footer>
 
     <script>
-        // Función para abrir una nueva pestaña con el archivo del parcial
-        function abrirParcial(archivo) {
+        // Función para abrir múltiples pestañas con archivos del primer parcial
+        function abrirParcialPrimer() {
+            abrirVentana('Act 1.1.html');
+            abrirVentana('Act 1.2.html');
+            abrirVentana('Act 1.3.html');
+            abrirVentana('ejemplo_tabla.html');
+            abrirVentana('banco.sql');
+            abrirVentana('e_facturas.sql');
+            abrirVentana('libreria.sql');
+        }
+
+        // Función para abrir una ventana emergente con un archivo
+        function abrirVentana(archivo) {
             window.open(archivo, '_blank');
         }
     </script>
