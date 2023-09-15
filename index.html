@@ -13,7 +13,9 @@
         }
 
         .gallery img {
-            max-width: 300px;
+            width: 100%;
+            max-width: 300px; /* Tamaño máximo deseado */
+            height: auto;
             margin: 10px;
         }
 
@@ -29,15 +31,25 @@
             color: #fff;
             text-decoration: none;
         }
+
+        /* Estilos CSS para la visualización de archivos */
+        #archivo-container {
+            display: none;
+            max-width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
     </style>
 </head>
 <body>
     <!-- Galería de imágenes (al inicio de la página) -->
     <div class="gallery">
-        <img src="https://lastfm.freetls.fastly.net/i/u/ar0/0d3a88f8d3b8be2ccffae1792cadd0be.jpg" alt="Imagen 1">
-        <img src="https://lastfm.freetls.fastly.net/i/u/ar0/31e1f9395f5ef7805107ee6f4ceb2d08.jpg" alt="Imagen 2">
-        <img src="https://cdns-images.dzcdn.net/images/cover/52c772aeead66fe8fa5aa738c9950a47/500x500.jpg" alt="Imagen 3">
-        <!-- Agrega más imágenes aquí con sus respectivas URLs -->
+        <img src="1.jpg" alt="Imagen 1">
+        <img src="2.jpg" alt="Imagen 2">
+        <img src="3.jpg" alt="Imagen 3">
+        <!-- Agrega más imágenes aquí con nombres numerados -->
     </div>
 
     <!-- Título -->
@@ -46,10 +58,23 @@
     <!-- Párrafo sobre la vida de un estudiante universitario -->
     <p>Como estudiante universitario, tengo sueños y metas normales. Estoy comprometido con mi educación y trabajando duro para alcanzar mis objetivos académicos. La universidad es una etapa emocionante de mi vida, llena de aprendizaje y crecimiento personal.</p>
 
-    <!-- Botones para los parciales -->
-    <button onclick="abrirParcialPrimer()">Primer Parcial</button>
-    <button onclick="abrirParcial('parcial2.pdf')">Segundo Parcial</button>
-    <button onclick="abrirParcial('parcial3.pdf')">Tercer Parcial</button>
+    <!-- Botón para mostrar archivos del primer parcial -->
+    <button onclick="mostrarArchivosPrimerParcial()">Mostrar Archivos del Primer Parcial</button>
+
+    <!-- Contenedor para visualización de archivos -->
+    <div id="archivo-container">
+        <h2>Archivos del Primer Parcial</h2>
+        <ul>
+            <li><a href="Act 1.1.html" target="archivo-frame">Act 1.1.html</a></li>
+            <li><a href="Act 1.2.html" target="archivo-frame">Act 1.2.html</a></li>
+            <li><a href="Act 1.3.html" target="archivo-frame">Act 1.3.html</a></li>
+            <li><a href="ejemplo_tabla.html" target="archivo-frame">ejemplo_tabla.html</a></li>
+            <li><a href="banco.sql" target="archivo-frame">banco.sql</a></li>
+            <li><a href="e_facturas.sql" target="archivo-frame">e_facturas.sql</a></li>
+            <li><a href="libreria.sql" target="archivo-frame">libreria.sql</a></li>
+        </ul>
+        <iframe name="archivo-frame" width="100%" height="500px"></iframe>
+    </div>
 
     <!-- Footer con el copyright y enlace a Instagram -->
     <footer>
@@ -57,20 +82,9 @@
     </footer>
 
     <script>
-        // Función para abrir múltiples pestañas con archivos del primer parcial
-        function abrirParcialPrimer() {
-            abrirVentana('Act 1.1.html');
-            abrirVentana('Act 1.2.html');
-            abrirVentana('Act 1.3.html');
-            abrirVentana('ejemplo_tabla.html');
-            abrirVentana('banco.sql');
-            abrirVentana('e_facturas.sql');
-            abrirVentana('libreria.sql');
-        }
-
-        // Función para abrir una ventana emergente con un archivo
-        function abrirVentana(archivo) {
-            window.open(archivo, '_blank');
+        // Función para mostrar el contenedor de archivos del primer parcial
+        function mostrarArchivosPrimerParcial() {
+            document.getElementById('archivo-container').style.display = 'block';
         }
     </script>
 </body>
