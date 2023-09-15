@@ -30,6 +30,24 @@
             text-decoration: none;
         }
     </style>
+    <script>
+    // Función para abrir múltiples pestañas con archivos del primer parcial
+    function abrirParcialPrimer() {
+        abrirVentana('Act 1.1.html');
+        abrirVentana('Act 1.2.html');
+        abrirVentana('Act 1.3.html');
+        abrirVentana('ejemplo_tabla.html');
+        abrirVentana('banco.sql');
+        abrirVentana('e_facturas.sql');
+        abrirVentana('libreria.sql');
+    }
+
+    // Función para abrir una ventana emergente con un archivo
+    function abrirVentana(archivo) {
+        window.open(archivo, '_blank');
+    }
+</script>
+
 </head>
 <body>
     <!-- Galería de imágenes (al inicio de la página) -->
