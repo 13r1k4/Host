@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+    <script>
+    function creaArreglo(){    
+        var checkArray = new Array(100);
+        var tablaTxt="<tabla border='1'>";
+        let i=0,j=0,num=0;
+        for ( i = 0; i < 100; i ++ ) {
+            checkArray[i] = 0;
+        }
+        alert(checkArray);
+
+        let arrayBidi = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0],[0, 0, 0, 0, 0],[0, 0, 0, 0, 0],[0, 0, 0, 0, 0]];
+        arrayBidi[2][2]=Math.floor(Math.random()*100);
+        
+       
+        for(i=0;i<5;i++)
+        tablaTxt+="<tr>";
+        {
+            for(j=0;j<5;j++)
+            {
+                do{
+                    num=Math.floor(Math.random()*100);    
+                }while(checkArray[num]==1);
+                arrayBidi[i][j]=num;
+                checkArray[num]=1;
+                tablaTxt+="<td>"+arrayBidi[i][j]+"<td/>"
+            }        
+            tablaTxt+="</td>";
+            console.log(arrayBidi[i]);
+        }
+        tablaTxt+="</table>";
+            document.getElementById("demo").innerHTML=tableTxt;
+        
+    }
+    </script>
+        
+</head>
+<body>
+    <p id= "demo" onclick="creaArreglo()">Da click aqui</p>
+</body>
+</html>
